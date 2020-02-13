@@ -15,7 +15,7 @@ trigger:
 jobs:
 - job: RunTest1
   displayName: 'Run Tests'
-  pool: Default
+  pool: Din_pool
   steps:              
   - task: VisualStudioTestPlatformInstaller@1
     displayName: 'Visual Studio Test Platform Installer'
@@ -26,7 +26,7 @@ jobs:
       testSelector: 'testAssemblies'
       testAssemblyVer2: '**/SampleSelenium*.dll'
       runSettingsFile: 'legacy.runsettings'
-      searchFolder: '$(System.DefaultWorkingDirectory)\bin\Debug\'
+      searchFolder: '$(System.DefaultWorkingDirectory)\'
       platform: '$(BuildPlatform)'
       configuration: '$(BuildConfiguration)'
       vsTestVersion: 'toolsInstaller'
