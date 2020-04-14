@@ -26,6 +26,7 @@ jobs:
       testSelector: 'testAssemblies'
       testAssemblyVer2: '**/SampleSelenium*.dll'
       runSettingsFile: 'legacy.runsettings'
+      searchFolder: '$(System.DefaultWorkingDirectory)\'
       vsTestVersion: 'toolsInstaller'
 
 
