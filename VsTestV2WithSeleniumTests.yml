@@ -29,7 +29,8 @@ jobs:
       testSelector: 'testAssemblies'
       testAssemblyVer2: '**/SampleSelenium*.dll'
       searchFolder: '$(System.DefaultWorkingDirectory)\'
- 
+      vsTestVersion: 'toolsInstaller'
+  
 
 
         
