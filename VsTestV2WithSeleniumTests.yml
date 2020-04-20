@@ -24,7 +24,9 @@ jobs:
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
-      testAssemblyVer2: '**/SampleSelenium*.dll'
+      testAssemblyVer2: |
+          **\SampleSelenium*.dll
+          !**\obj\**
       searchFolder: '$(System.DefaultWorkingDirectory)\'
  
 
