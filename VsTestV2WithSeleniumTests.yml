@@ -20,7 +20,10 @@ jobs:
   - task: VisualStudioTestPlatformInstaller@1
     displayName: 'Visual Studio Test Platform Installer'
     inputs:
-      versionSelector: 'latestPreRelease'  
+      packageFeedSelector: 'nugetOrg'
+      versionSelector: 'specificVersion'
+      testPlatformVersion: '16.5.0'
+
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
@@ -28,7 +31,8 @@ jobs:
           **\SampleSelenium*.dll
           !**\obj\**
       searchFolder: '$(System.DefaultWorkingDirectory)\'
- 
+      vsTestVersion: 'toolsInstaller'
+  
 
 
         
