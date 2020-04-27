@@ -7,11 +7,6 @@
 # https://aka.ms/yaml
 
 
-trigger:
-
-- master
-
-
 jobs:
 - job: RunTest1
   displayName: 'Run Tests'
@@ -20,9 +15,7 @@ jobs:
   - task: VisualStudioTestPlatformInstaller@1
     displayName: 'Visual Studio Test Platform Installer'
     inputs:
-      packageFeedSelector: 'nugetOrg'
-      versionSelector: 'specificVersion'
-      testPlatformVersion: '16.5.0'
+      versionSelector: 'latestPreRelease'
 
   - task: VSTest@2
     inputs:
