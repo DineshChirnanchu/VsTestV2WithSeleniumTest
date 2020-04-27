@@ -6,7 +6,6 @@
 
 # https://aka.ms/yaml
 
-
 jobs:
 - job: RunTest1
   displayName: 'Run Tests'
@@ -16,13 +15,12 @@ jobs:
     displayName: 'Visual Studio Test Platform Installer'
     inputs:
       versionSelector: 'latestPreRelease'
-
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
       testAssemblyVer2: |
-          **\SampleSelenium*.dll
-          !**\obj\**
+         **\SampleSelenium*.dll
+         !**\obj\**
       searchFolder: '$(System.DefaultWorkingDirectory)\'
       vsTestVersion: 'toolsInstaller'
   
